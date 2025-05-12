@@ -8,7 +8,7 @@
   azul claro: #94d2bd
   naranja brillante: #ee9b00
   naranja claro: #fcbf49
-  fondo claro: #fefae0
+  fondo: #fefae0
   */
 }
 
@@ -16,7 +16,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #001219;
   margin: 0;
-  padding: 4rem; /* Espacio debajo */
+  padding: 4rem;  
 }
 
 
@@ -30,7 +30,8 @@ body {
   text-align: center;
   margin-bottom: 2rem;
   color: #ffb829;
-  text-decoration: underline;
+ 
+   border-bottom: 2px solid #ca6702;
 }
 
 .cuadros {
@@ -92,6 +93,20 @@ b {
   border-radius: 5px;
   color: #001219;
 }
+
+
+.nota {
+ border-top: 2px solid #ca6702;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fefae0;
+  text-align: right;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+
+
+
 
 @media (max-width: 800px) {
   .cuadros {
