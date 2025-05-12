@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitácora Tercer Parcial</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="bitacora">
+    <h1>BITACORA TERCER PARCIAL</h1>
+
+    <div class="cuadros">
+
+<div class="tarjeta1">
+    <h2> CSS Grid Layout </h2> <br>
+        <div class="texto">
+    <p>     Grid es un sistema de diseño bidimensional basado en cuadriculas que, en comparación con cualquier sistema de diseño web 
+            del pasado, cambia por completo la forma en que diseñamos las interfaces de usuario. Fue creado especialmente para resolver 
+            los problemas de diseño y permite definir un sistema de cuadricula.
+    </p>  
+
+    <h3> Sintaxis </h3>
+    <p>    Se debe definir un elemento contenedor como una cuadricula con <i>Display: grid; </i>
+           Todos los hijos directos del contenedor se convierten automaticamente en elementos grid </p> 
+         
+    <h3> Conceptos importantes </h3>
+    <p>
+    <b>1. column-gap / row-gap: </b> los espacios entre las columnas y los renglones se pueden ajustar con estas dos propiedades, respectivamente. <br>
+    <b>2. medida fr: </b> abreviatura de fracción, se utiliza para especificar fracciones del espacio disponible en una cuadrícula css. 
+    Es útil cuando se quiere distribuir el espacio restante después de colocar los elementos en la cuadrícula. <br>
+    </p> 
+
+<div class="sub"> 
+           <h3> grid-template-areas </h3> <br>
+     <p> 
+        Es una propiedad CSS Grid que permite definir un esquema de cuadrícula utilizando nombres de áreas personalizadas en lugar 
+        de especificar las líneas de la cuadrícula con <b>gird-template-rows</b> y <b>grid-template-columns</b> <br><br>
+        <b> grid-column-start / grid-column-end :</b> determina la ubicación de un elemento de la cuadricula haciendo referencia a líneas de cuadricula específicas.
+    </p> 
+</div> <!-- SUB -->
+</div> <!-- TEXTO -->
+</div> <!-- TARJETA -->
+
+     
+<div class="tarjeta2">
+    <h2> Unidades Responsivas </h2> <br>
+        <div class="contenido">
+<div class="sub2"> 
+    <h3> Unidades absolutas </h3>
+    <p> px (píxeles), cm (centímetros) e in (pulgadas), representan tamaños fijos y no cambian independientemente del contexto
+        en el que se utilicen, proporcionando una medida exacta que puede ser útil para diseños que requieren precisión milimétrica.
+    </p>  
+</div> <!-- SUB -->
+<div class="sub"> 
+    <h3> Unidades relativas </h3>
+    <p> % (porcentaje), em y rem, son flexibles y se adaptan en función de otros elementos. <br>
+        Por ejemplo, % es nativo al tamaño del contenedor padre, em es relativo al tamaño de fuente del elemento padre,
+        y rem es relativo al tamaño de fuente del elemento raíz (HTML). Son ideales para crear diseños responsivos, ya que
+        permiten que los elementos del diseño cambien en respuesta al tamaño de la  plantilla.
+    </p>  
+</div> <!-- SUB -->
+<div class="sub2"> 
+    <h3> Unidades de vista de ventana  </h3>
+    <p> Son herramientas que se ajustan dinámicamente al tamaño de la ventana gráfica del navegador. <br><br>
+    <b>1. vw (Wiewport width):</b>  representa un porcentaje del ancho de la ventana, donde 1vw=1% del ancho del total de la ventana. <br>
+    <b>2. vh (wiewport height): </b> representa un porcentaje de la altura de la ventana, donde 1vh=1% de la altura total de la ventana. <br>
+    <b>3. vmin (viewport minimum): </b> representa el 1% de la dimensión más pequeña de la ventana gráfica. Si el tamaño de la ventana es 100px X 200px, entonces 1vmin=10px (1% de 100px). <br>
+    <b>4.wmax(viewport maximum): </b> representa el 1% de la dimensión más grande de la ventana gráfica. En el mismo ejemplo anterior, 1vmax=20px (1% de 200px). <br>
+    </p> 
+</div> <!-- SUB -->
+
+</div> <!-- TEXTO -->
+</div> <!-- TARJETA -->
+
+
+<div class="tarjeta2">
+    <h2> Herramientas y funciones </h2> <br>
+        <div class="texto">
+
+    <h3> Repeat () </h3>
+    <p> Esta función sirve para no tener que escribir muchas veces lo mismo cuando defines columnas o renglones en un grid. <br> 
+    <b>  sintaxis: </b> grid-template-columns: repeat(n, valor) <br><br>
+    <b><i>n</i></b> representa el número de columnas o rows. El siguiente ejemplo define un grid de tres columnas de una fracción de ancho. <br> <br> 
+    <i> grid-template-columns: repeat(3, 1fr); </i>
+    </p> 
+        
+    <h3> Función minmax() </h3>
+    <p> Define un tamaño mínimo y máximo para una columna o fila. Puede usarse directamente en grid-template-columns o cómo valor en <b>repeat()</b> 
+    <b>  sintaxis: </b> minmax(valor-minimo, valor-máximo) <br>
+    El siguiente ejemplo define un grid de una columna de mínimo de 200px y el máximo de una fracción.<br><br>
+    <i> grid-template-columns: minmax(200px, 1fr); </i>
+    </p> 
+ 
+
+    <h3> Palabra clave auto-fill </h3>
+    <p> Se usa dentro de <b>repeat()</b>, sustituyendo al número que indica el número de columnas y crear tantas columnas como quepan, pero no 
+    expande las columnas cuando hay espacio disponible. Ejemplo: <br> <br>
+    <i> grid-template-columns: repeat( auto-fill, minmax( 200px, 1fr)); </i>
+    </p> 
+
+</div> <!-- TEXTO -->
+</div> <!-- TARJETA -->
+
+
+<div class="tarjeta1">
+    <h2> Calc y Clamp </h2> <br>
+        <div class="texto">
+        
+    <h3> Calc() </h3>
+    <p>  Es especialmente útil cuando se necesita combinar diferentes unidades <i>(em, %, px, etc)</i> o ajustar valores de manera dinámica según el contexto 
+        del diseño. Utiliza los operadores de suma (+), resta (-),  multiplicación (*) y division (/). Espacios alrededor de los operadores 
+        son obligatorios, por ejemplo: <br>
+        <i> height: calc(100vh - 60px); </i> <br><br>
+	
+        <b>Flexible:</b> permite combinar diferentes unidades de medida. <br>
+        <b>Responsivo:</b> facilita la creación de diseños que se adaptan mejor a diferentes tamaños de ventana y dispositivos. <br>
+        <b>Simplicidad:</b> reduce la necesidad de cálculos complicados y ajustes manuales en el diseño. <br>
+       
+    </p>  
+
+    <h3> Clamp() </h3>
+    <p>  Se utiliza para crear diseños adaptativos en CSS, permitiendo que las propiedades se ajusten dentro de un rango definido, lo que 
+        mejora la experiencia del usuario en diferentes dispositivos. Tiene tres parámetros: un valor mínimo, un valor preferido y un valor 
+        máximo. El navegador selecciona el valor preferido si se encuentra dentro del rango especificado; de lo contrario elige el valor mínimo 
+        o máximo. <br>
+        <b>  sintaxis: </b>   <i>clamp:(min, preferido, max) </i> <br><br>
+	
+       En el siguiente ejemplo, el tamaño de fuente será 1rem si el valor preferdo es menor, 2rem si es mayor y 1.5rem en otros casos.<br>
+       <i>font-size: clamp(1rem, 1.5 rem, 2rem); </i>
+    </p>  
+   
+</div> <!-- TEXTO -->
+</div> <!-- TARJETA -->
+
+
+  </div> <!-- class cuadros -->
+  </div> <!-- class bitacora -->
+</body> 
+</html>

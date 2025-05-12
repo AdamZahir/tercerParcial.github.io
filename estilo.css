@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*
+  azul oscuro: #001219
+  azul medio: #005f73
+  azul claro: #94d2bd
+  naranja brillante: #ee9b00
+  naranja claro: #fcbf49
+  fondo claro: #fefae0
+  */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #001219;
+  margin: 0;
+  padding: 4rem; /* Espacio debajo */
+}
+
+
+.bitacora {
+  width: 90%;
+  margin: auto;
+}
+
+.bitacora h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffb829;
+  text-decoration: underline;
+}
+
+.cuadros {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* TARJETAS ---------------------------- */
+.tarjeta1 {
+  background-color: #96ffdc;
+  padding: 1.5rem;
+  color: #000000;
+}
+
+.tarjeta2 {
+  background-color: #fdc658;
+  padding: 1.5rem;
+  color: #000000;
+}
+
+.tarjeta1 h2, .tarjeta2 h2 {
+  color: #0d02a2;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.texto p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+    text-align: justify;
+}
+
+h3 {
+  color: darkred;
+}
+
+i {
+    color: rgb(255, 255, 255);
+  background-color: #0e5d67;
+}
+
+b {
+  color: #d02323;
+}
+
+/* -------------------------------------------- */
+.sub {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+   background-color: #f6fffe;
+  border-radius: 5px;
+  color: #001219;
+}
+
+.sub2 {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #fffadd;
+  border-radius: 5px;
+  color: #001219;
+}
+
+@media (max-width: 800px) {
+  .cuadros {
+    grid-template-columns: 1fr;
+  }
+}
